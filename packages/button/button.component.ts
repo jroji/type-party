@@ -1,29 +1,26 @@
 import {
     LitElement, html, customElement, property
   } from 'lit-element';
-import { User, Input } from '@components/models';
 
 // Extend the LitElement base class
 @customElement('my-button')
-export class ButtonElement extends LitElement implements Input, Omit<User, 'email'> {
+export class ButtonElement extends LitElement {
 
     @property()
-    name = '';
+    text = '';
 
-    @property()
-    accounts = [];
-
-    @property()
-    value = {};
-
-    reset(): boolean {
-        return true;
+    _myButtonClicked() {
+      this.dispatchEvent(
+        new CustomEvent('my-button-clicked', {
+          composed: true,
+          bubbles: true,
+      }));
     }
 
     render(){
         return html`
           <!-- template content -->
-          <p>A paragraph</p>
+          <button @click="${this._myButtonClicked}"><slot>${this.text}</slot></button>
         `;
       }
 }

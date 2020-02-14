@@ -4,9 +4,9 @@ import { ButtonElement } from './button.component';
 
 export default {
   component: ButtonElement,
-  title: 'Demo',
+  title: 'Button',
 };
 
 export const Heading = () =>
-  '<my-button></my-button>'
+  '<my-button>boton</my-button>'
 ;
