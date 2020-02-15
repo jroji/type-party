@@ -1,0 +1,16 @@
+{
+  "name": "@components/card-slot-button",
+  "version": "0.0.1",
+  "description": "",
+  "main": "card-slot-button.component.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit-element": "^2.2.1",
+    "@components/models": "^0.0.1",
+    "@components/button": "^0.0.1"
+  }
+}

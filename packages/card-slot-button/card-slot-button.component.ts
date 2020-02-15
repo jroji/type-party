@@ -3,17 +3,10 @@ import {
 } from 'lit-element';
 
 import '@components/button';
-import { User } from '../models';
 
 // Extend the LitElement base class
-@customElement('my-card-button')
-export class CardButtonElement extends LitElement {
-
-  @property({type: String})
-  header = 'This is the cards title';
-
-  @property({type: String})
-  text = 'Text inside our card';
+@customElement('my-card-slot-button')
+export class CardButtonSlotElement extends LitElement {
 
   @property({type: String, attribute: 'button-name'})
   buttonName = 'button';
@@ -43,10 +36,7 @@ export class CardButtonElement extends LitElement {
 
   render() {
     return html`
-      <h1>${this.header}</h1>
-      <slot>
-        <p>${this.text}</p>
-      </slot>
+      <slot></slot>
       <my-button>${this.buttonName}</my-button>
     `;
   }

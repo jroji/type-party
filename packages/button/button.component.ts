@@ -1,5 +1,5 @@
 import {
-    LitElement, html, customElement, property
+    LitElement, html, customElement, property, css
   } from 'lit-element';
 
 // Extend the LitElement base class
@@ -15,6 +15,20 @@ export class ButtonElement extends LitElement {
           composed: true,
           bubbles: true,
       }));
+    }
+
+    static get styles() {
+      return css`
+        button {       
+          color: white;
+          padding: 8px 18px;
+          border: none;
+          border-radius: 2px;
+          background: #ff0000;
+          text-transform: capitalize; 
+          margin-top: 12px;
+        }
+      `;
     }
 
     render(){
