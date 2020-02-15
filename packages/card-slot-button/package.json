@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lit-element": "^2.2.1",
+    "@components/button": "^0.0.1",
     "@components/models": "^0.0.1",
-    "@components/button": "^0.0.1"
+    "lit-element": "^2.2.1"
   }
 }
